@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aislan A</title>
+
+    <link rel="stylesheet" href="../static/reset.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="">
+            <div class="fw-logo"></div>
+        </a>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Projects</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="ladding-page">
+            <h1>I'm <strong>Aislan</strong></h1>
+            <span id="randomText"></span>
+        </section>
+        <section class="about-me">
+            <div class="am-textbox">
+                <h1>Olá</h1>
+                <p>Olá, meu nome é Aislan, tenho 17 anos e sou moro em uma cidade no interior da Bahia. Minha entrada na área da criação de sites foi impulsionada pela influência de um grande amigo, <a href="https://gabriel-aplok.com/">Gabriel Aplok</a>. Atualmente, estou dedicando meu tempo ao aprendizado de novas linguagens e tecnologias, como Python e C++, para aprimorar minhas habilidades e me destacar no mercado.
+                    Além disso, deixei minha marca registrada no universo do Minecraft, onde desenvolvo mods, explorando áreas como Modelagem 3D, Texturização e Animação 3D. Meu objetivo é direcionar minha carreira para a área de Game Development, onde pretendo criar jogos que proporcionem experiências alegres e até mesmo amedrontadoras.
+                </p>
+            </div>
+            <section class="skills">
+                <div class="experience-list">
+                    <div class="el-box">
+                        <i class="fa-brands fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="el-box">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="el-box">
+                        <i class="fa-brands fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="el-box">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="projects">
+            <h1>Projects</h1>
+            <div class="projects-list">
+                
+                {% for project in projects %}
+                    <a href="{{ url_for('project', project_id=loop.index0) }}" class="p-box">
+
+                        <img src="{{ url_for('static', filename='img/' + project.img) }}">
+
+                    </a>
+                {% endfor %}
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="f-textbox">
+            <span>©2024 <strong>Firewave Interactive</strong>. ALL RIGHTS RESERVED.</span>
+        </div>
+        <div class="social-medias">
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="../static/main.js"></script>
+</body>
+</html>
