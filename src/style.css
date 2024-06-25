@@ -1,0 +1,39 @@
+body {
+    background: #fff;
+    color: #252525;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+header h1 {
+    font-size: 20px;
+}
+
+.projets-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    color: #252525;
+}
+.img {
+    height: 15em;
+    width: 100%;
+    background: #252525;
+}
+.textbox {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+}
