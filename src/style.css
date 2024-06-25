@@ -29,11 +29,22 @@ header h1 {
 .img {
     height: 15em;
     width: 100%;
-    background: #252525;
+}
+img {
+    border-radius: 6px;
 }
 .textbox {
     display: flex;
     flex-direction: column;
     padding: 5px;
     gap: 5px;
+}
+
+/* Responsive Mobile */
+@media screen and (max-width: 480px) {
+    .projets-list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2em;
+        padding: 30px;
+    }
 }

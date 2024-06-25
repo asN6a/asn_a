@@ -40,3 +40,10 @@ main span {
     background: #252525;
     color: #fff;
 }
+
+/* Responsive Mobile */
+@media screen and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+}
